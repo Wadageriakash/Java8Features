@@ -1,0 +1,13 @@
+In Java, both Comparable and Comparator interfaces are used for sorting objects. The main difference between Comparable and Comparator is:
+
+* Comparable: It is used to define the natural ordering of the objects within the class.
+* Comparator: It is used to define custom sorting logic externally.
+
+* Comparable having the method called compareTo(T o)
+* Comparator having the method called compare(T o1, T02)
+
+* Why comparator is a functional interface?
+ 1) Functional Interface were introduced in Java 8. It has exactly one abstract method.
+ 2) In Comparator<T>, the only abstract method is: int compare(T o1, T o2);
+ 3) The equals(Object obj) method in Comparator comes from the Object class, so it is not abstract in the interface.
+ 4) Therefore, Comparator qualifies as a functional interface and can be used with lambdas in Java 8+.
